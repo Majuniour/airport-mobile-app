@@ -91,7 +91,7 @@ export default class Timetable extends React.Component {
                       style={{height:7, width:7, top: 7}}
                     />
                     </View>
-                      <View style={{left:5, width:'20%'}}>
+                      <View style={{left:5, width:'25%'}}>
                     <Text style={{textTransform: 'capitalize', fontWeight:'bold'}}>{item.status}</Text>
                     </View>
                       </View>
