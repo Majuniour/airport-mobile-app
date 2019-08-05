@@ -77,49 +77,44 @@ export default class Timetable extends React.Component {
             <FlatList
               data={JSON.parse(this.state.data)}
               renderItem={({ item, index }) => (
-                <ListItem
+                <ListItem style={{margin:10}}
                   roundAvatar
                   subtitle={
                     <View style={{flexDirection: 'column'}}>
-                    <View style={styles.flight}>
-                    <View style={{width: 50, height: 50}}>
-                      <Image 
-                      source={require('../assets/images/_ios/Plane_x1.png')}
-                      style={{height:20, width:20}}
-                    />
-                    </View>
-                    <View style={{width:'60%'}}> 
-                      <Text style={{fontWeight:'bold'}}>{item.airline.name}</Text>
-                    </View>
-                    <View>
+                      <View style={styles.flightDetails}>
+                        <View style={{width:'75%'}}>
+                          <Text style={{fontWeight:'bold', color:'#10044c'}}>{Moment(item.departure.scheduledTime).format('LT')}</Text>
+                          </View>
+                          <View>
                     <Image 
                       source={item.status !== 'active' ? require('../assets/images/_ios/Red_dot_x1.png') : require('../assets/images/_android/green_dot_x1.png')}
-                      style={{height:5, width:5, top: 8}}
+                      style={{height:7, width:7, top: 7}}
                     />
                     </View>
-                    <View  style={{left:5}}>
-                    <Text style={{textTransform: 'capitalize'}}>{item.status}</Text>
+                      <View style={{left:5, width:'20%'}}>
+                    <Text style={{textTransform: 'capitalize', fontWeight:'bold'}}>{item.status}</Text>
+                    </View>
+                      </View>
+                    <View style={styles.flight}>
+                    <View>
+                      <Image 
+                      source={require('../assets/images/_ios/Plane_x1.png')}
+                      style={{height:40, width:40, top:10}}
+                    />
+                    </View>
+                    <View style={{width:'80%'}}> 
+                      <Text style={{fontWeight:'bold',fontSize:20}}>{item.airline.name}</Text>
+                      <Text style={{fontWeight:'bold'}}>{item.arrival.iataCode}</Text>
+                      <Text style={{fontWeight:'bold'}}>{item.flight.number}</Text>
+                      
                     </View>
                   </View>
-                      <View style={styles.flightDetails}>
-                        <View style={{width:'40%'}}>
-                          <Text>Departure Time</Text>
-                          <Text style={{fontWeight:'bold'}}>{Moment(item.departure.scheduledTime).format('LT')}</Text>
-                          </View>
-                        <View style={{width:'35%'}}>
-                          <Text>Flight Number</Text>
-                          <Text style={{fontWeight:'bold'}}>{item.flight.number}</Text>
-                          </View>
-                        <View style={{width:'25%'}}>
-                          <Text>Destination</Text>
-                          <Text style={{fontWeight:'bold'}}>{item.arrival.iataCode}</Text>
-                          </View>
-                      </View>
+                
                     </View>
                
                
                   }
-                  containerStyle={{ borderBottomWidth: 1 }}
+                  containerStyle={{ borderBottomWidth: 0 }}
                 />
               )}
               keyExtractor={(item, index) => 'key'+index}
@@ -136,13 +131,8 @@ const styles = StyleSheet.create({
     marginVertical:100,
     height:'100%'
   },
-  flight:{flex: 1, flexDirection: 'row', borderBottomColor:'grey', borderBottomWidth:1},
-  flightDetails:{flexDirection: 'row', alignContent:'space-between', alignSelf:'flex-start'},
-  contactUs:{
-    flex: 1,
-    justifyContent:'center',
-    alignContent:'center'
-  },
+  flight:{flex: 1, flexDirection: 'row', borderBottomColor:'grey', borderBottomWidth:0, width:'100%'},
+  flightDetails:{flexDirection: 'row', alignContent:'space-between', alignSelf:'flex-start',borderBottomColor:'grey', borderBottomWidth:1},
   activityLoader:{
     flex: 1,   
     justifyContent: 'center',
