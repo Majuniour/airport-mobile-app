@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Airport Mobile Application",
+    "slug": "airport-schedule",
+    "privacy": "public",
+    "sdkVersion": "34.0.0",
+    "android": {
+      "package": "com.dvt.airport",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDaMHXPuiFT0KD3aG6_QMY19fPBgexejzs"
+        }
+      }
+    },
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}

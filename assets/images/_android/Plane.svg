@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>flights</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Android-Copy-3" transform="translate(-20.000000, -246.000000)" fill="#757575">
+            <g id="Card">
+                <g id="Group-2" transform="translate(0.000000, 226.000000)">
+                    <g id="flights" transform="translate(27.500000, 29.000000) rotate(-90.000000) translate(-27.500000, -29.000000) translate(18.500000, 21.500000)">
+                        <path d="M18,7.5 C18,6.86842105 17.37,6.31578947 16.65,6.31578947 L11.7,6.31578947 L7.2,0 L5.4,0 L7.65,6.31578947 L2.7,6.31578947 L1.35,4.73684211 L-2.84217094e-14,4.73684211 L0.9,7.5 L-2.84217094e-14,10.2631579 L1.35,10.2631579 L2.7,8.68421053 L7.65,8.68421053 L5.4,15 L7.2,15 L11.7,8.68421053 L16.65,8.68421053 C17.37,8.68421053 18,8.13157895 18,7.5 L18,7.5 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
