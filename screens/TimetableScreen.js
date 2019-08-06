@@ -77,7 +77,7 @@ export default class Timetable extends React.Component {
             <FlatList
               data={JSON.parse(this.state.data)}
               renderItem={({ item, index }) => (
-                <ListItem style={{margin:10}}
+                <ListItem style={styles.card}
                   roundAvatar
                   subtitle={
                     <View style={{flexDirection: 'column'}}>
@@ -129,7 +129,8 @@ export default class Timetable extends React.Component {
 const styles = StyleSheet.create({
   container: {
     marginVertical:100,
-    height:'100%'
+    height:'100%',
+    backgroundColor:'grey'
   },
   flight:{flex: 1, flexDirection: 'row', borderBottomColor:'grey', borderBottomWidth:0, width:'100%'},
   flightDetails:{flexDirection: 'row', alignContent:'space-between', alignSelf:'flex-start',borderBottomColor:'grey', borderBottomWidth:1},
@@ -139,5 +140,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignSelf: 'center',
     backgroundColor:'#ffffff'
+  },
+  card:{
+    margin:10,
+    borderRadius:5
   }
 })
